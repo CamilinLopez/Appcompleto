@@ -4,7 +4,7 @@ const Productos = (sequelize) => {
   sequelize.define("productos", {
     id: {
       type: DataTypes.STRING,
-      primarykey: true,
+      primaryKey: true,
       allowNull: false,
     },
     nombre: {
@@ -16,12 +16,12 @@ const Productos = (sequelize) => {
       allowNull: true,
     },
     precio: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
     },
     stock: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: 0,
     },

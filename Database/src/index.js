@@ -22,11 +22,11 @@ const initializeDatabase = async () => {
     await database.sync({ force: false });
     console.log(`Connected to ${database.getDatabaseName()} database`);
   } catch (error) {
-    console.error("Unable to connect to the database:", error.message);
+    console.log("Unable to connect to the database:", error.message);
   }
 };
 
-await initializeDatabase();
+initializeDatabase();
 
 module.exports = {
   ...database.models,

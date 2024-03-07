@@ -10,7 +10,7 @@ const ProductosCarrito = (sequelize) => {
         allowNull: false,
       },
       cantidad: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0,
       },
