@@ -14,6 +14,11 @@ const ProductosCarrito = (sequelize) => {
         allowNull: false,
         defaultValue: 0,
       },
+      subtotal: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0,
+      },
     },
     {
       timestamps: false,

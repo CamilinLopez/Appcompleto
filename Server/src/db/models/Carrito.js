@@ -18,6 +18,11 @@ const Carrito = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      total: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0,
+      },
     },
     {
       timestamps: false,
