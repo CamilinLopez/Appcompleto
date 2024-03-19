@@ -7,12 +7,31 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        boton: "#FF5733",
+        anuncio: "#21618C",
+        fondo: "#EAF2F8", // FDFEFE
+        flecha: "#D35400",
+        enlace: "#D35400",
+        header: "#1B4F72",
+        gris: "#B2BABB",
       },
+    },
+    fontSize: {
+      grande: ["2rem", { lineHeight: "1" }], // 32px
+      mediano: ["1.5rem", { lineHeight: "1" }], // 24px
+      pequeño: ["1.25rem", { lineHeight: "1" }], // 20px
+      mpequeño: ["1rem", { lineHeight: "1" }], // 16px
+    },
+    fontWeight: {
+      negrita: "700",
+      mediana: "500",
+      normal: "400",
     },
   },
   plugins: [],

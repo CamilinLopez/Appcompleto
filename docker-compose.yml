@@ -5,9 +5,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_DB: appcompleto
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: camilo1998
+      POSTGRES_USER: ${POSTGRES_DB_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB_NAME}
     ports:
       - "5432:5432"
 
@@ -17,5 +17,26 @@ services:
       - database
     links:
       - database
+    ports:
+      - 3001:3001
+
+    command:
+      [
+        "./wait-for-it.sh",
+        "database:5432",
+        "--",
+        "npm",
+        "start"
+      ]
+  frontend:
+    build: ./Frontend
+    volumes:
+      - ./Frontend:/appfront
+    depends_on:
+      - database
+      - server
+    links:
+      - database
+      - server
     ports:
       - 3000:3000
