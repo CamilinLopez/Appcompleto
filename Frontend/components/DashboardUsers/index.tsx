@@ -1,26 +1,27 @@
-import Link from "next/link";
+"use client";
 
+import { Navbar } from "../utils";
+import { usePathname } from "next/navigation";
 const StepsCreateProduct = () => {
+  const pathname = usePathname();
   return (
     <div className="container">
-      <div className="h-16 flex items-center">
-        <Link className="text-gris font-mediana" href={"/dashboard/descripcion"}>
-          Descripcion basica
-        </Link>
-        <Link className="text-gris font-mediana mx-8" href={"/"}>
-          Categorias
-        </Link>
-        <Link className="text-gris font-mediana mx-8" href={"/"}>
-          Detalles
-        </Link>
-        <Link className="text-gris font-mediana mx-8" href={"/"}>
-          Precios
-        </Link>
-        <Link className="text-gris font-mediana mx-8" href={"/"}>
-          Canje
-        </Link>
+      <div className="h-16 flex items-center gap-x-8">
+        <Navbar
+          ruta="/dashboard/descripcion"
+          title="Descripcion basica"
+          path={pathname}
+        />
+        <Navbar
+          ruta="/dashboard/Categorias"
+          title="Categorias"
+          path={pathname}
+        />
+        <Navbar ruta="/dashboard/Detalles" title="Detalles" path={pathname} />
+        <Navbar ruta="/dashboard/Precios" title="Precios" path={pathname} />
+        <Navbar ruta="/dashboard/Canje" title="Canje" path={pathname} />
       </div>
-      <hr className="border-t-2" />
+      <hr className="border-t-[2px] border-gray-300 -mt-[10px]" />
     </div>
   );
 };

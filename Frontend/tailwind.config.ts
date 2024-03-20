@@ -30,7 +30,7 @@ const config: Config = {
     },
     fontWeight: {
       negrita: "700",
-      mediana: "500",
+      mediana: "600",
       normal: "400",
     },
   },
