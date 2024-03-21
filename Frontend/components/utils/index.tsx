@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CustomInputProps } from "./interface";
+import { CustomRadioProps } from "@/types/productoType";
 
 export const BigTitle = ({ text }: { text: string }) => {
   return <h1 className="text-black font-negrita text-mediano">{text}</h1>;
@@ -49,6 +50,19 @@ export const Navbar = ({
         {title}
       </Link>
       <div className={`${backgroundcolor} h-[7px] w-auto mt-3`}></div>
+    </div>
+  );
+};
+
+export const CustomRadio: React.FC<CustomRadioProps> = ({
+  className = "",
+  text,
+  ...props
+}) => {
+  return (
+    <div>
+      <input className="h-5 w-5" {...props} />
+      <p>{text}</p>
     </div>
   );
 };
