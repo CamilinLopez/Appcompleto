@@ -60,9 +60,9 @@ export const CustomRadio: React.FC<CustomRadioProps> = ({
   ...props
 }) => {
   return (
-    <div>
+    <div className="flex items-center gap-x-3">
       <input className="h-5 w-5" {...props} />
-      <p>{text}</p>
+      <p className="text-black">{text}</p>
     </div>
   );
 };

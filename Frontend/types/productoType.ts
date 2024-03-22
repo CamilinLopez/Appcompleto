@@ -13,9 +13,9 @@ export interface Producto {
   nombre: string;
   supportemail: string;
   tipo: string;
+  descripcion: string;
 }
 
 export interface CustomRadioProps extends CustomInputProps {
-    text: string;
-  }
-  
+  text: string;
+}
