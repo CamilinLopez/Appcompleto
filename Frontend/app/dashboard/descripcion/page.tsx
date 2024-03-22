@@ -138,7 +138,7 @@ export default function page() {
                 producto en 100 caracteres o menos.
               </p>
               <textarea
-                className="h-20 w-[450px] border border-black text-black hover:border-blue-500"
+                className="h-20 w-[450px] border border-black text-black hover:border-blue-500 overflow-hidden resize-none"
                 maxLength={100}
                 name="descripcion"
                 value={formulario.descripcion}
