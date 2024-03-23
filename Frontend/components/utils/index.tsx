@@ -66,3 +66,11 @@ export const CustomRadio: React.FC<CustomRadioProps> = ({
     </div>
   );
 };
+
+export const Paragraph = ({ text }: { text: string }) => {
+  return (
+    <p className="my-3 text-black text-mpequeño font-sans leading-normal w-[700px]">
+      {text}
+    </p>
+  );
+};
