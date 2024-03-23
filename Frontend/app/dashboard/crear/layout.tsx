@@ -1,3 +1,4 @@
+import Header from "@/components/DashboardUsers";
 
 export default function dashoboardLayoutUser({
   children,
@@ -5,6 +6,7 @@ export default function dashoboardLayoutUser({
   return (
     <div className="" >
       <div>
+        <Header />
         {children}
       </div>
     </div>

@@ -9,6 +9,7 @@ import {
 } from "@/components/utils";
 import { ChangeEvent, useState } from "react";
 import { Producto } from "@/types/productoType";
+import Modal from "@/components/DashboardUsers/modal";
 
 export default function page() {
   const [formulario, useFormulario] = useState<Producto>({
@@ -18,6 +19,7 @@ export default function page() {
     tipo: "Software",
     descripcion: "",
   });
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
 
   const handleOnChangeRadio = (e: ChangeEvent<HTMLInputElement>) => {
     if (formulario.tipo === e.target.value)
@@ -156,7 +158,13 @@ export default function page() {
                 y la imagen de su producto sobre un fondo contrastante."
               />
 
-              <button className="hover:bg-blue-600 hover:text-white transition duration-500  my-5 flex gap-x-2 text-blue-700 font-negrita border-[2px] rounded-full px-4 py-2 border-blue-700">
+              <button
+                className="hover:bg-blue-600 hover:text-white transition duration-400  my-5 flex gap-x-2 text-blue-700 font-negrita border-[2px] rounded-full px-4 py-2 border-blue-700"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpenModal(true);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -173,6 +181,7 @@ export default function page() {
               </button>
             </div>
           </form>
+          {isOpenModal && <Modal closeModal={() => setIsOpenModal(false)} />}
         </div>
       </div>
     </div>

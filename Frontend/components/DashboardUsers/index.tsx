@@ -8,18 +8,18 @@ const StepsCreateProduct = () => {
     <div className="container">
       <div className="h-16 flex items-center gap-x-8">
         <Navbar
-          ruta="/dashboard/descripcion"
+          ruta="/dashboard/crear/descripcion"
           title="Descripcion basica"
           path={pathname}
         />
         <Navbar
-          ruta="/dashboard/Categorias"
+          ruta="/dashboard/crear/categorias"
           title="Categorias"
           path={pathname}
         />
-        <Navbar ruta="/dashboard/Detalles" title="Detalles" path={pathname} />
-        <Navbar ruta="/dashboard/Precios" title="Precios" path={pathname} />
-        <Navbar ruta="/dashboard/Canje" title="Canje" path={pathname} />
+        <Navbar ruta="/dashboard/crear/detalles" title="Detalles" path={pathname} />
+        <Navbar ruta="/dashboard/crear/precios" title="Precios" path={pathname} />
+        <Navbar ruta="/dashboard/crear/canje" title="Canje" path={pathname} />
       </div>
       <hr className="border-t-[2px] border-gray-300 -mt-[10px]" />
     </div>
